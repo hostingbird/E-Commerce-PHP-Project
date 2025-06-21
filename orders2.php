@@ -1,6 +1,7 @@
 <?php include("partials/session.php") ?>
 <?php include('confi.php');
 include("partials/validation.php");
+require_once 'env.php';
 
 if (!isset($_COOKIE['HDF_REQ_CHECKIN'])) {
     echo "<script>location.href='checkout.php'</script>";
@@ -48,7 +49,7 @@ $firstDirectory = isset($pathParts[0]) ? '/' . $pathParts[0] : '';
         $option = "none"; 
         $signature = $_POST["signature"] ?? "";
         $data = $orderId . $orderAmount . $referenceId . $txStatus . $paymentMode . $txMsg . $txTime;
-        $secretKey = "cfsk_ma_test_6b723b2e8420f94e6680af872c23dd5a_3dc055b9" ?? "";
+        $secretKey = $_ENV['CASH_TEST_SCR'];
         $hash_hmac = hash_hmac('sha256', $data, $secretKey, true) ?? "";
         $computedSignature = base64_encode($hash_hmac) ?? "";
 
