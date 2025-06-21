@@ -1,0 +1,19 @@
+# Hide sensitive and system files
+.env
+/confi.php
+*.log
+*.sql
+/cash3/config.php
+/asset/public/
+/backend/
+/secure-checkout2oldervers.php
+/u328200287_hdf.sql
+
+# IDE and system files
+.idea/
+.vscode/
+.DS_Store
+
+# Composer/Node
+vendor/
+node_modules/

@@ -1,0 +1,93 @@
+.order-container {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            max-width: 600px;
+        }
+        /* Status-specific styles */
+        .failure {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+            user-select: none;
+            pointer-events: none;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .pending {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+            color: #856404;
+        }
+        .success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .flex-pane {
+            display: flex;
+        }
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .product-img-div {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .order_product-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .OR_quantity {
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            backdrop-filter : brightness(65%);
+            color: #ffffff;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .more-products{
+             width: 50px;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            backdrop-filter: blur(20px);
+            background:#ffffff79;
+            color: #010101;
+            font-weight:700;
+            border-radius: 50%;
+        }
+.bottom_order_det{
+    width:100%;
+    margin:7px 0;
+    display:flex;
+    justify-content:space-between;
+}
+.bottom_order_det div{
+    width:max-content;
+}
+.orderOtion{
+    max-width:max-content;
+    display:flex;
+    justify-content:center;
+}

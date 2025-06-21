@@ -1,0 +1,119 @@
+                      
+                        <!-- <div class="header-nav-left" style="max-width:700px; max-width:100%;">
+                <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                    <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                        <div class="offcanvas-header navbar-shadow">
+                            <h5>Category</h5>
+                            <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <ul class="category-slider-2 product-wrapper no-arrow">
+                <?php
+                $query = "SELECT * FROM `category` WHERE 1";
+                $run = mysqli_query($conn, $query);
+                if ($run) {
+                    if (mysqli_num_rows($run) > 0) {
+                        $count = 0;
+                        while ($row = mysqli_fetch_assoc($run)) {
+                            ?>
+                            <li class="">
+                                <a href="javascript:void(0)" class="category-box category-dark d-flex" style="background:;">
+                                    <img src="../assets/svg/1/<?php echo $row['caticon'] ?>" alt=""
+                                        style="max-width:20px; margin-right:12px;min-width:20px;" />
+                                    <h6 style="margin-right:12px;"><?php echo ucwords($row['catname']) ?>
+                                    </h6>
+                                </a>
+
+                                <!-- <div class="dropdown-menu">
+                                                            <div class="list-1">
+                                                                <div class="category-title-box">
+                                                                    <h5>Organic Vegetables</h5>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Potato &
+                                                                            Tomato</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Cucumber
+                                                                            & Capsicum</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Leafy
+                                                                            Vegetables</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Root
+                                                                            Vegetables</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Beans &
+                                                                            Okra</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Cabbage &
+                                                                            Cauliflower</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Gourd &
+                                                                            Drumstick</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="dropdown-item">Specialty</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="category-title-box">
+                                                                    <h5>Organic Vegetables</h5>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Potato &
+                                                                            Tomato</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Cucumber
+                                                                            & Capsicum</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Leafy
+                                                                            Vegetables</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Root
+                                                                            Vegetables</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Beans &
+                                                                            Okra</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Cabbage &
+                                                                            Cauliflower</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)" class="dropdown-item">Gourd &
+                                                                            Drumstick</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)"
+                                                                            class="dropdown-item">Specialty</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div> -->
+                            </li>
+                        <?php }
+                    }
+                } ?>
+            </ul>
+
+            <input class="form-check-input" type="radio"
+                                                                        name="standard" id="future" disabled> 
