@@ -36,17 +36,17 @@ $firstDirectory = isset($pathParts[0]) ? '/' . $pathParts[0] : '';
 
         json_encode($_POST);
 
-        $user = $userID; 
+        $user = $userID;
         $orderId = $_POST["orderId"] ?? $_POST["unique_id"];
-        $orderType = 1; 
+        $orderType = 1;
         $txMsg = $_POST["txMsg"] ?? "";
-        $orderAmount = $_POST["orderAmount"] ?? $_POST["total"]; 
-        $referenceId = $_POST["referenceId"] ?? "COD Order"; 
-        $txStatus = $_POST["txStatus"] ?? "COD Order"; 
-        $paymentMode = $_POST["paymentMode"] ?? $_POST['paymentModes']; 
-        $txTime = $_POST["txTime"] ?? date('Y-m-d H:i:s', time()); 
-        $address = $addressID; 
-        $option = "none"; 
+        $orderAmount = $_POST["orderAmount"] ?? $_POST["total"];
+        $referenceId = $_POST["referenceId"] ?? "COD Order";
+        $txStatus = $_POST["txStatus"] ?? "COD Order";
+        $paymentMode = $_POST["paymentMode"] ?? $_POST['paymentModes'];
+        $txTime = $_POST["txTime"] ?? date('Y-m-d H:i:s', time());
+        $address = $addressID;
+        $option = "none";
         $signature = $_POST["signature"] ?? "";
         $data = $orderId . $orderAmount . $referenceId . $txStatus . $paymentMode . $txMsg . $txTime;
         $secretKey = $_ENV['CASH_TEST_SCR'];
@@ -260,7 +260,7 @@ $firstDirectory = isset($pathParts[0]) ? '/' . $pathParts[0] : '';
                         </div>
                     </div>
                 </section>
-            <?php
+                <?php
                                         } else {
                                             echo ' <div class="mobile-menu d-md d-block cart">
         <ul>
@@ -874,7 +874,7 @@ body{
                         </div>
                     </div>
                 </section>
-            <?php
+                <?php
                                         } else {
                                             echo ' <div class="mobile-menu d-md d-block cart">
         <ul>
@@ -1508,17 +1508,18 @@ body{
     <!-- Bg overlay End -->
 
     <!-- latest jquery-->
-    <script src="http://<?php echo $currentDomain . $firstDirectory; ?>/asset/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>h/asset/assets/js/jquery-3.6.0.min.js"></script>
 
     <!-- jquery ui-->
-    <script src="http://<?php echo $currentDomain . $firstDirectory; ?>/asset/assets/js/jquery-ui.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>/asset/assets/js/jquery-ui.min.js"></script>
 
     <!-- Bootstrap js-->
     <script
-        src="http://<?php echo $currentDomain . $firstDirectory; ?>/asset/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+        src="<?php echo BASE_URL; ?>/asset/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script
-        src="http://<?php echo $currentDomain . $firstDirectory; ?>/asset/assets/js/bootstrap/bootstrap-notify.min.js"></script>
-    <script src="http://<?php echo $currentDomain . $firstDirectory; ?>/asset/assets/js/bootstrap/popper.min.js"></script>
+        src="<?php echo BASE_URL; ?>/asset/assets/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script
+        src="<?php echo BASE_URL; ?>/asset/assets/js/bootstrap/popper.min.js"></script>
 </body>
 
 </html>
