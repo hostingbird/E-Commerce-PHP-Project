@@ -6,18 +6,6 @@ require_once 'env.php';
 if (!isset($_COOKIE['HDF_REQ_CHECKIN'])) {
     echo "<script>location.href='checkout.php'</script>";
 }
-
-$currentDomain = $_SERVER['HTTP_HOST'];
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$currentUrl = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
-$parsedUrl = parse_url($currentUrl);
-$path = $parsedUrl['path'];
-
-
-$path = ltrim($path, '/');
-$pathParts = explode('/', $path);
-$firstDirectory = isset($pathParts[0]) ? '/' . $pathParts[0] : '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -249,7 +237,7 @@ $firstDirectory = isset($pathParts[0]) ? '/' . $pathParts[0] : '';
 ';
                                                 echo '<h1 style="color:red">Order Failed By the Server</h1>';
                                                 echo '<h5 class="text-content">if amount is deducted it will return in 1-2 working days ,or you can contact to our customer care support</h5>';
-                                                echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
 
                                             }
                                             ?>
@@ -732,11 +720,11 @@ body{
 ';
                                                     echo '<h1 style="color:yellow">Order Pending</h1>';
                                                     echo '<h5 class="text-content">Do not Pay again if amount is deducted , contact to our customer care</h5>';
-                                                    echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                    echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
                                                 } else {
                                                     echo '<h1 style="color:yellow">Order Pending and not be done</h1>';
                                                     echo '<h5 class="text-content">Server , contact to our customer care</h5>';
-                                                    echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                    echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
 
                                                 }
 
@@ -795,11 +783,11 @@ body{
 ';
                                                     echo '<h1 style="color:red">Order Payment Failed</h1>';
                                                     echo '<h5 class="text-content">if amount is deducted it will return in 1-2 working days ,or you can contact to our customer care support</h5>';
-                                                    echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                    echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
                                                 } else {
                                                     echo '<h1 style="color:red">Order Failed</h1>';
                                                     echo '<h5 class="text-content">Server Error ,or you can contact to our customer care support</h5>';
-                                                    echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                    echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
 
                                                 }
 
@@ -859,11 +847,11 @@ body{
 ';
                                                     echo '<h1 style="color:red">Order Droped</h1>';
                                                     echo '<h5 class="text-content">if need any help, you can contact to our customer care support</h5>';
-                                                    echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                    echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
                                                 } else {
                                                     echo '<h1 style="color:red">Order Failed Server Error</h1>';
                                                     echo '<h5 class="text-content">if need any help, you can contact to our customer care support</h5>';
-                                                    echo '<h2>Mail to : <a href="mailto:support@<?php echo $currentDomain.$firstDirectory; ?>">support@<?php echo $currentDomain.$firstDirectory; ?></a></h2>';
+                                                    echo '<h2>Mail to : <a href="mailto:support@domain.com">support@domain.com</a></h2>';
                                                 }
                                             }
                                             ?>
